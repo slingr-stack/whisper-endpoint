@@ -1,47 +1,3 @@
----
-title: Whisper Endpoint
-keywords: 
-last_updated: June 20, 2023
-tags: []
-summary: "Detailed description of the API of the Whisper endpoint."
----
-
-## Overview
-
-The Whisper endpoint has the following features:
- 
-- Authorization with API Token
-
-Please make sure you take a look at the documentation from OpenAI as features are based on its API:
-
-- [API Reference](https://platform.openai.com/docs/introduction)
-
-## Quick start
-
-Once you configured the endpoint, you can list current models with this call:
-
-```js
-for(var model of app.endpoints.whisper.models.get().data)
-{ 
-    log(JSON.stringify(model))
-}
-```
-
-## Configuration
-
-Before configuring the endpoint you will need to create an account in OpenAI:
-[OpenAI login](https://platform.openai.com/signup?launch)
-
-Once you have your account you will be able to configure the endpoint.
-
-### API Token
-
-The API token of the account. This field is required. [API Token list](https://platform.openai.com/account/api-keys)
-
-### Organization ID
-
-The organization ID of the account. This field is optional. [Organization ID](https://platform.openai.com/account/org-settings)
-
 # Javascript API
 
 The Javascript API of the whisper endpoint has three pieces:
@@ -51,7 +7,7 @@ The Javascript API of the whisper endpoint has three pieces:
 - **Additional Helpers**: These helpers provide additional features that facilitate or improves the endpoint usage in SLINGR.
 
 ## HTTP requests
-You can make `GET`,`POST` requests to the [Whisper API](https://platform.openai.com/docs/api-reference/audio) like this:
+You can make `GET`,`POST` requests to the [whisper API](API_URL_HERE) like this:
 ```javascript
 var response = app.endpoints.whisper.get('/v1/models/:model')
 var response = app.endpoints.whisper.post('/v1/audio/transcriptions', body)
@@ -113,10 +69,10 @@ app.endpoints.whisper.moderations.post(body)
 ---
 
 </details>
-
+    
 ## Flow Step
 
-As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the endpoint:
+As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the endpoint: 
 <details>
     <summary>Click here to see the Flow Steps</summary>
 
@@ -300,16 +256,5 @@ Description of Custom Flow Steps
 
 </details>
 
-
 ## Additional Helpers
 *MANUALLY ADD THE DOCUMENTATION OF THESE HELPERS HERE...*
-
-## About SLINGR
-
-SLINGR is a low-code rapid application development platform that accelerates development, with robust architecture for integrations and executing custom workflows and automation.
-
-[More info about SLINGR](https://slingr.io)
-
-## License
-
-This endpoint is licensed under the Apache License 2.0. See the `LICENSE` file for more details.
